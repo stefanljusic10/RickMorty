@@ -1,5 +1,6 @@
 import { setCurrentPageToLocalStorage } from "./setCurrentPageToLocalStorage";
 
+// pagination helper function
 export const goToPage = {
   prev(currentPage, setCurrentPage) {
     const page = currentPage - 1;

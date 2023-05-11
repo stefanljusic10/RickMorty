@@ -9,6 +9,7 @@ import Button from '../../components/Button/Button';
 import { PATH } from '../../constants/constants';
 
 const Episode = () => {
+  // get id of selected episode from path parameters and fetch data
   const { episodeId } = useParams()
   const { data, isLoading, isSuccess } = useGetEpisodeQuery(episodeId)
   const navigate = useNavigate();

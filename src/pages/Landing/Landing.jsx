@@ -8,8 +8,11 @@ import Pagination from "../../components/Pagination/Pagination";
 
 const Landing = () => {
   const [searchText, setSearchText] = useState("");
+  // current page gets 1 when app is loaded and localStorage is empty
   const [currentPage, setCurrentPage] = useState(JSON.parse(localStorage.getItem('currentPage')) || 1);
+  // get all characters using RTK Query
   const { data, isLoading, isSuccess } = useGetCharactersQuery(currentPage);
+  // filter characters with search bar
   let filteredCharacters = data?.results.filter((ch) => ch.name.toLowerCase().includes(searchText.toLowerCase()) ) || [];
   if (searchText) filteredCharacters = filteredCharacters.slice(0, 10);
 

@@ -8,9 +8,15 @@ import Button from "../../components/Button/Button";
 import { PATH } from "../../constants/constants";
 
 const Character = () => {
+  // get id of selected character from path and fetch data using rtk query
   const { characterId } = useParams();
   const { data, isLoading, isSuccess } = useGetCharacterQuery(characterId);
 
+  // generate episodes links
+  // props:
+  // url - url of episode
+  // path: constant without id parameter
+  // name: button content with episode number
   const episodes = data?.episode.map((e, i) => <Button key={i} url={e} path={PATH.episode} name={i} />)
 
   const content = (

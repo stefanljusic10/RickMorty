@@ -4,7 +4,6 @@ import { Link, Outlet } from "react-router-dom";
 import { PATH } from "../../constants/constants";
 
 const Header = () => {
-  
   return (
     <>
       <div className="header">

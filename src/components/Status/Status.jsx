@@ -3,7 +3,6 @@ import "./status.scss";
 import { STATUS_COLOR } from "../../constants/constants";
 
 const Status = ({ status }) => {
-
   const color =
     status === "Alive"
       ? STATUS_COLOR.alive

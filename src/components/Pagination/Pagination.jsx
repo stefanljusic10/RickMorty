@@ -5,12 +5,15 @@ import { goToPage } from "../../utils/goToPage";
 
 const Pagination = ({ currentPage, setCurrentPage, totalPages }) => {
 
+  // array of generated page numbers
   const pageNumbers = useMemo(
     () => pageNumbersCalculator(currentPage, totalPages, 5),
     [currentPage, totalPages]
   );
 
+
   const content = pageNumbers.map((num) => {
+    // adding color for currently active page
     const currentPageColor = num === currentPage && "blue";
     return (
       <span
