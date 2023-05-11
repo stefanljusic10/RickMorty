@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Episode from "./pages/Episode/Episode";
 import Character from "./pages/Character/Character";
 import { PATH } from "./constants/constants";
+import Error from "./pages/Error/Error";
 
 const App = () => {
   return (
@@ -15,9 +16,10 @@ const App = () => {
           <Route path={PATH.index} element={<Header />}>
             <Route index element={<Landing />} />
             <Route path={PATH.character + "/:characterId"} element={<Character />}>
-              <Route path={PATH.episode + "/:episodeId"} element={<Episode />} />
+              <Route path={PATH.episode + "/:episodeId"} element={<Episode />}/>
             </Route>
           </Route>
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
     </BrowserRouter>

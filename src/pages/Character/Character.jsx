@@ -6,11 +6,15 @@ import Loading from "../../components/Loading/Loading";
 import Status from "../../components/Status/Status";
 import Button from "../../components/Button/Button";
 import { PATH } from "../../constants/constants";
+import Error from "../Error/Error";
 
 const Character = () => {
   // get id of selected character from path and fetch data using rtk query
   const { characterId } = useParams();
   const { data, isLoading, isSuccess } = useGetCharacterQuery(characterId);
+
+  // if character is not found
+  if(!isLoading && !isSuccess) return <Error />;
 
   // generate episodes links
   // props:
