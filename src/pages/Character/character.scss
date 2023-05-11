@@ -1,0 +1,47 @@
+@import "../../style/variables";
+@import "../../style/mixins";
+
+.character {
+  padding: $padding-big;
+
+  &__content {
+    display: flex;
+    position: relative;
+    color: $color-black;
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    max-width: 30rem;
+  }
+
+  &__text {
+    padding: $padding-modal;
+
+    & > :not(:first-child) {
+      margin-top: 0.8rem;
+    }
+  }
+
+  &__name {
+    font-size: $fSize-modal-name;
+    margin-bottom: 2rem;
+  }
+
+  &__info {
+    & > span {
+      font-weight: bold;
+      font-size: inherit;
+    }
+    font-size: $fSize-text;
+  }
+
+  & > p {
+    @include listHeadline;
+  }
+
+  &__episodesList {
+    @include listLinks;
+  }
+}

@@ -1,0 +1,10 @@
+@import '../../style/variables';
+
+.button{
+    background-color: $color-violet;
+    color: $color-white;
+    border: none;
+    padding: .5rem 1rem;
+    font-size: $fSize-text;
+    cursor: pointer;
+}

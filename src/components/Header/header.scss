@@ -1,0 +1,14 @@
+@import "../../style/variables";
+
+.header {
+  background-color: $color-grey;
+  padding: $padding-big;
+  
+  & > a{
+    color: $color-black;
+    font-size: $fSize-text;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}

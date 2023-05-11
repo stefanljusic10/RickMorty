@@ -1,0 +1,22 @@
+@import "./variables";
+
+@mixin paginationItem {
+  border: none;
+  background-color: $color-blue;
+  color: $color-white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: $fSize-text;
+}
+
+@mixin listHeadline {
+  font-size: $fSize-text;
+  margin-top: $marginTop-small;
+  margin-bottom: 1rem;
+}
+
+@mixin listLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

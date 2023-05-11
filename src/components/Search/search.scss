@@ -1,0 +1,15 @@
+@import "../../style/variables";
+
+.search {
+  display: flex;
+  justify-content: end;
+
+  &__input {
+    width: 20%;
+    font-size: $fSize-text;
+    border: none;
+    padding: 1rem;
+    border-bottom: 2px solid $color-grey;
+    outline: transparent;
+  }
+}
