@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mixins";
 
 .search {
   display: flex;
@@ -11,5 +12,14 @@
     padding: 1rem;
     border-bottom: 2px solid $color-grey;
     outline: transparent;
+    @include respond(bp-1024) {
+      width: 50%;
+    }
+    @include respond(bp-768) {
+      width: 100%;
+    }
+    @include respond(bp-640) {
+      font-size: $fSize-text-mobile;
+    }
   }
 }

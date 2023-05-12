@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mixins";
 
 .status {
   position: absolute;
@@ -6,7 +7,11 @@
   right: 1rem;
   width: fit-content;
   border-radius: 5px;
-  padding: 0.3rem 0.6rem;
+  padding: $padding-status-desktop;
   font-size: $fSize-text;
   color: white;
+  @include respond(bp-640) {
+    font-size: $fSize-text-mobile;
+    padding: $padding-status-mobile;
+  }
 }

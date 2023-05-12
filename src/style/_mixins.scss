@@ -20,3 +20,22 @@
   flex-wrap: wrap;
   gap: 0.5rem;
 }
+
+// MEDIA QUERIES - RESPONSIVNESS
+@mixin respond($breakpoint) {
+  @if $breakpoint == bp-1024 {
+    @media (max-width: 64rem) {
+      @content;
+    } // 64rem = 1024px
+  }
+  @if $breakpoint == bp-768 {
+    @media (max-width: 48rem) {
+      @content;
+    } // 48rem = 768px
+  }
+  @if $breakpoint == bp-640 {
+    @media (max-width: 40rem) {
+      @content;
+    } // 40rem = 640px
+  }
+}

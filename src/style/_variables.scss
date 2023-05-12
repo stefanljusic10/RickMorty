@@ -5,10 +5,16 @@ $color-blue: #235eff;
 $color-violet: rgb(234, 93, 234);
 $color-violet-dark: rgb(213, 84, 213);
 
-$padding-big: 2rem 15rem;
+$padding-desktop: 2rem 15rem;
+$padding-tablet: 2rem 5rem;
+$padding-mobile: 1rem;
 $padding-modal: 2rem;
+$padding-modal-mobile: 1rem;
+$padding-status-desktop: .3rem .6rem;
+$padding-status-mobile: .5rem 1rem;
 
 $fSize-text: 1.6rem;
+$fSize-text-mobile: 3rem;
 $fSize-modal-name: 3rem;
 
 $marginTop-small: 4rem;

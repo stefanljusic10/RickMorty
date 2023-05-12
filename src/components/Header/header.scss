@@ -1,8 +1,15 @@
 @import "../../style/variables";
+@import "../../style/mixins";
 
 .header {
   background-color: $color-grey;
-  padding: $padding-big;
+  padding: $padding-desktop;
+  @include respond(bp-1024) {
+    padding: $padding-tablet;
+  }
+  @include respond(bp-640) {
+    padding: $padding-mobile;
+  }
   
   & > a{
     color: $color-black;
@@ -10,5 +17,9 @@
     text-decoration: none;
     font-weight: 700;
     cursor: pointer;
+
+    @include respond(bp-640) {
+      font-size: $fSize-text-mobile;
+    }
   }
 }

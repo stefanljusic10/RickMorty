@@ -2,22 +2,44 @@
 @import "../../style/mixins";
 
 .character {
-  padding: $padding-big;
+  padding: $padding-desktop;
+  @include respond(bp-1024) {
+    padding: $padding-tablet;
+  }
+  @include respond(bp-640) {
+    padding: $padding-mobile;
+  }
 
   &__content {
     display: flex;
     position: relative;
     color: $color-black;
+
+    @include respond(bp-640) {
+      flex-direction: column;
+    }
   }
 
   &__image {
     position: relative;
     width: 100%;
     max-width: 30rem;
+    @include respond(bp-640) {
+      max-width: 100%;
+    }
+
+    & > img{
+      width: 100%;
+    }
   }
 
   &__text {
     padding: $padding-modal;
+
+    @include respond(bp-640) {
+      margin-top: 2rem;
+      padding: 0;
+    }
 
     & > :not(:first-child) {
       margin-top: 0.8rem;

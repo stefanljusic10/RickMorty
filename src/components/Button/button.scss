@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mixins";
 
 .button {
   background-color: $color-violet;
@@ -7,4 +8,8 @@
   padding: 0.5rem 1rem;
   font-size: $fSize-text;
   cursor: pointer;
+
+  @include respond(bp-640) {
+    padding: 0.8rem 1.6rem;
+  }
 }

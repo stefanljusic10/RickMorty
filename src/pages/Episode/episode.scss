@@ -3,19 +3,30 @@
 
 .episode {
   position: fixed;
-  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: $padding-big;
+  padding: $padding-desktop;
   background-color: rgba($color: #000000, $alpha: 0.5);
   display: flex;
+  @include respond(bp-1024) {
+    padding: $padding-tablet;
+  }
+  @include respond(bp-640) {
+    padding: 0;
+  }
 
   &__modal {
     margin: auto;
     background-color: $color-white;
     padding: $padding-modal;
+
+    @include respond(bp-640) {
+      padding: $padding-modal-mobile;
+      height: 100vh;
+      width: 100vw;
+    }
 
     & > p {
       @include listHeadline;
